@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --color-primary: #0741dc;
+  --text: "Poppins", sans-serif;
+  --color-primary-dark: #0032bc;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--text);
+  overflow-x: hidden;
+}
+
+nav.navbar li a {
+  font-weight: 400;
+  color: #000;
+}
+
+nav.navbar li a.nav-link.active {
+  color: var(--color-primary) !important;
+}
+
+nav.navbar .dropdown-toggle::after {
+  content: "\f078";
+  font-family: "FontAwesome";
+  font-weight: bold;
+  border: 0;
+  position: absolute;
+  font-size: 14px;
+  transform: translateX(5px);
+}
+
+header .cta {
+  background-color: var(--color-primary);
+  color: #fff;
+  transition: 0.2s;
+  box-shadow: 0 0 15px 0 rgb(0 0 0 / 30%);
+}
+
+.sidbar_nav {
+  display: flex;
+  column-gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+header .cta:hover {
+  background-color: var(--color-primary-dark);
+  color: #fff;
+  transition: 0.2s;
+}
+
+header a[data-bs-toggle="modal"] {
+  color: #000;
+  font-size: 20px;
+  transition: 0.2s;
+}
+
+header a[data-bs-toggle="modal"]:hover {
+  transition: 0.2s;
+  color: #666;
+}
+
+.left_col_form {
+  padding: 20px;
+}
+
+.left_col_form h2.title {
+  font-size: 45px;
+  line-height: 1.3em;
+}
+
+.list_items .box {
+  display: flex;
+  column-gap: 25px;
+  margin-top: 25px;
+  max-width: 300px;
+}
+
+.list_items .box i {
+  font-size: 40px;
+  color: var(--color-primary);
+}
+
+.list_items .box h5 {
+  font-size: 18px;
+}
+
+.list_items .box h6 {
+  color: #b1b1b1;
+  font-size: 17px;
+  line-height: 1.3em;
+}
+
+.contact_form {
+  padding: 40px 60px;
+  border: 1px solid var(--color-primary);
+  box-shadow: 0 0 12px 0 rgb(0 0 0 / 20%);
+  border-radius: 6px;
+}
+
+.contact_form .form-floating > label {
+  left: 12px;
+  color: #666;
+}
+
+.contact_form .form-floating > label::after {
+  background-color: transparent !important;
+}
+
+.contact_form .form-floating input,
+.contact_form .form-floating textarea {
+  background-color: #f8f8f8;
+  border: 0;
+}
+
+.contact_form textarea {
+  resize: none;
+  height: auto !important;
+  min-height: auto !important;
+}
+
+.contact_form button {
+  background-color: var(--color-primary);
+  transition: 0.2s;
+  width: 100%;
+  padding: 0;
+  height: 50px;
+  font-size: 15px;
+  font-weight: 300;
+  color: #fff;
+}
+.contact_form button:hover {
+  background-color: var(--color-primary-dark);
+  transition: 0.2s;
+  color: #fff;
+}
+
+.form_content {
+  margin: 30px 0;
+}
+.form_content h6 {
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.form_content h2 {
+  font-size: 40px;
+  margin-top: 20px;
+}
+
+.list_items {
+  margin: 40px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .navbar-nav {
+    width: 55%;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .navbar-nav {
+    width: 66%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .sidbar_nav {
+    justify-content: start;
+    flex-direction: row-reverse;
+  }
+  .form_content h2,
+  .left_col_form h2.title {
+    font-size: 30px;
+    text-align: center;
+    line-height: 1.3em;
+  }
+  .contact_form {
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .list_items {
+    margin: 20px;
+  }
+  .form_content h2,
+  .left_col_form h2.title {
+    font-size: 25px;
+  }
+  .list_items * {
+    word-break: break-word;
+  }
+}
